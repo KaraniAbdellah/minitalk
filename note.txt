@@ -1,0 +1,22 @@
+// Processes and signals
+/*
+    - Signal: is a message that is sent to a process to indicate a particular event
+        has occurred or to request a particular action to be taken.
+    - Process: is a program that is being executed by the computer.
+
+    - Remember: a signal is just telling a process to do a certain thing
+
+    - To send a signal to a certain process you need the PID --> kill <PID>
+    - To Know The PID --> top
+        kill 1828 $$ killall brave $$ ps -Af | grep brave
+*/
+
+// Function Used
+/*
+    signal():
+        signal function allows you to specify a function to be called
+            when a particular signal is received.
+        
+*/
+
+
