@@ -14,9 +14,23 @@
 // Function Used
 /*
     signal():
+        "sighandler_t signal(int signum, sighandler_t handler);"
         signal function allows you to specify a function to be called
             when a particular signal is received.
+        A signal is a message from the operating system to a 
+            program indicating that some event has occurred
+
+    sigemptyset():
+        "int sigemptyset(sigset_t *set);"
+        The sigemptyset function is used to initialize a signal set to the empty set,
+            which means that it does not contain any signals. Signal sets
+            are used by some functions, such as sigaction
+
+    sigaddset():
+        "int sigaddset(sigset_t *set, int signum);"
+        This function allows to add a signal to a set of signals.
         
+
 */
 
 

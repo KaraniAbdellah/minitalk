@@ -2,24 +2,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void signal_handler(int signum) 
-{
-  printf("Received SIGINT!\n", signum);
-  exit(0);
+void signal_handler(int signum) {
+    printf("Received SIGINT NUMBER %d\n", signum);
+    exit(0);
 }
 
-int main() 
-{
-  // Set the signal handler for the SIGINT and SIGTERM signals
-  // to the signal_handler function
-  
-  signal(SIGINT, signal_handler);
-  signal(SIGTERM, signal_handler);
+int main() {
+    // Set the signal handler for the SIGINT and SIGTERM signals
+    // to the signal_handler function
+    /*
+        SIGINT (INTERRUPT) is the interrupt signal and is raised when you press Ctrl+C.
+        SIGTERM (TERMINATION) signal is generated when the program is terminated by the operating system.
+    */
+    
+    signal(SIGINT, signal_handler);
+    signal(SIGTERM, signal_handler);
 
-  while (1) {
-    // Do some work here...
-  }
+    while (1) {
+        // Do some work here...
+    }
 
-  return 0;
+    return 0;
 }
 
