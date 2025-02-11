@@ -13,6 +13,7 @@ int main() {
     /*
         SIGINT (INTERRUPT) is the interrupt signal and is raised when you press Ctrl+C.
         SIGTERM (TERMINATION) signal is generated when the program is terminated by the operating system.
+            --> kill -TERM PID_Of_Main_Programm || kill -TERM 5154
     */
     
     signal(SIGINT, signal_handler);
