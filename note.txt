@@ -29,7 +29,32 @@
     sigaddset():
         "int sigaddset(sigset_t *set, int signum);"
         This function allows to add a signal to a set of signals.
+    
+    sigaction():
+        "int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact);"
+        function in C is used to specify the action to be taken when a specific signal is 
+            received by a process. It is defined in the signal.h header file.
+
+        The 'signum' argument specifies the signal for which the action is being specified.
+        The 'act' argument is a pointer to a struct 'sigaction' that specifies the
+            action to be taken when the signal is received.
+        The 'oldact' argument is a pointer to a struct sigaction that is used
+            to retrieve the previous action for the specified signal.
         
+    kill():
+        "int kill(pid_t pid, int sig);"
+        the kill function is a system call that sends a signal to a process.
+            It is defined in the signal.h header file
+
+    pause():
+        "int pause(void);"
+        is a function in the C standard library that causes the calling
+            process to sleep until a signal is received.
+    
+    sleep():
+        "unsigned int sleep(unsigned int seconds);"
+        sleep() is also a function in the C standard library that causes
+            the calling process to sleep for a specified number of seconds.
 
 */
 
